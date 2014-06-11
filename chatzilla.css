@@ -6,6 +6,10 @@ h1 /*selector*/ {
     <!--->can also use percentage for the font-size<--->
 }
 
+#chatContainer {
+    padding-top: 40px; /*so the bootstrap navbar does not cover our h1 elt.*/
+}
+
 #chatTitle {
     color: red;
 }

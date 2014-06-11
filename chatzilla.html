@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!--to interact with bootstrap, use classes for containers, and everything should be inside a div named 'container'-->
+    
   <title>Chatzilla</title>
-    <link href="chatzilla.css" rel="stylesheet">
+<!--    <link href="chatzilla.css" rel="stylesheet">-->
     <style>
 /*        h1 selector { 
             font-size: 2em; 
@@ -13,13 +20,37 @@
         } */
     </style>
 </head>
+    
 <!-- 
 block elements: try to fill up the whole screen width. div, p, h1, etc.
 inline elements: don't try to fill up width. button, textarea, etc.
 span: groups inline elements in a document. use with a class to style in css all at once.
 -->
+    
 <body>
-  <div id='chatContainer'>
+  <div class="container" id='chatContainer' style="padding-top:40px;">
+<!--      Note: navbar doesn't take space in the layout, it goes directly on top. This happens so that, when scrolling on a page, the navbar is always there.-->
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">edX Chat</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+      
     <h1 id='chatTitle'>
       edX Chat
     </h1>
@@ -30,14 +61,22 @@ span: groups inline elements in a document. use with a class to style in css all
         a super chat client
       </h1>
 -->
-      
-    <div id='chatHistory'>
-      <span class='username'>Alice</span>: Hi!<br>
-      <span class='username'>Bob</span>: Hola!<br>
-    </div>
+    <div class="row">
+        <!-- an elt can have multiple classes. separate them by spaces. -->
+        <div class="col-md-6 chatHistory" id='chatHistory'>
+          <span class='username'>Alice</span>: Hi!<br>
+          <span class='username'>Bob</span>: Hola!<br>
+        </div>
     
-    <textarea id="userChatTextarea" placeholder="Talk about edX."></textarea>
-    <button id='sendChat'>Send</button>
+        <div class="col-md-6">
+            <textarea id="userChatTextarea" placeholder="Talk about edX."></textarea>
+        <button id='sendChat'>Send</button>
+        </div>
+    </div>
   </div>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
