@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatzilla</title>
+    <link href="chatzilla.css" rel="stylesheet">
+    <style>
+/*        h1 selector { 
+            font-size: 2em; 
+            font-weight: normal;
+            font-style: italic;
+            text-align: center;
+            <!--->can also use percentage for the font-size<--->
+        } */
+    </style>
+</head>
+<!-- 
+block elements: try to fill up the whole screen width. div, p, h1, etc.
+inline elements: don't try to fill up width. button, textarea, etc.
+span: groups inline elements in a document. use with a class to style in css all at once.
+-->
+<body>
+  <div id='chatContainer'>
+    <h1 id='chatTitle'>
+      edX Chat
+    </h1>
+    
+      
+<!--
+      <h1 id='description'>
+        a super chat client
+      </h1>
+-->
+      
+    <div id='chatHistory'>
+      <span class='username'>Alice</span>: Hi!<br>
+      <span class='username'>Bob</span>: Hola!<br>
+    </div>
+    
+    <textarea id="userChatTextarea" placeholder="Talk about edX."></textarea>
+    <button id='sendChat'>Send</button>
+  </div>
+</body>
+</html>
